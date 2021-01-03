@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/book3"
+    android:alpha="0.8"
 
     tools:context=".MainActivity">
 
@@ -24,7 +26,7 @@
 
     <EditText
         android:id="@+id/editText"
-        
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -35,8 +37,9 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="UserName"
+
         android:inputType="textPersonName"
-        android:textColorHint="#fo1"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +58,7 @@
         android:layout_marginBottom="260dp"
         android:ems="10"
         android:hint="PassWord"
-        android:textColorHint="#fo1"
+        android:textColorHint="#fff"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +77,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="128dp"
         android:background="#E29C27B0"
-        android:text="Sign up"
+        android:text="Sign in"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
