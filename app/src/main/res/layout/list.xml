@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125sp">
+
+    <Button
+        android:background="#f0f"
+        android:id="@+id/add"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="45dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/subj"
+        android:layout_width="210dp"
+        android:layout_height="78dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="29dp"
+        android:text="Subject" />
+
+/>
+</RelativeLayout>

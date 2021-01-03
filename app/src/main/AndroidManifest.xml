@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProjectUpload"></activity>
+
+        <activity android:name=".View" />
+        <activity android:name=".ProjectView" />
+        <activity android:name=".ProjectUpload" />
         <activity android:name=".ProjectHome" />
         <activity android:name=".ProjectRegister" />
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".Hello">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
