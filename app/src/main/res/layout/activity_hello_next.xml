@@ -71,7 +71,7 @@
         android:layout_marginEnd="97dp"
         android:layout_marginRight="97dp"
         android:layout_marginBottom="384dp"
-        android:Hint="HEllo" />
+        android:hint="HEllo" />
 
     <TextView
         android:id="@+id/textView8"

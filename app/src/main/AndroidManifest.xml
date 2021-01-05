@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelloNext"></activity>
+        <activity android:name=".ViewAllBooks"></activity>
+        <activity android:name=".Success" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".HelloNext" />
         <activity android:name=".ProjectOption" />
-        <activity android:name=".View" />
         <activity android:name=".ProjectView" />
         <activity android:name=".ProjectUpload" />
         <activity android:name=".ProjectHome" />

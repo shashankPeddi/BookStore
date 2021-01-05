@@ -6,39 +6,39 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelperL extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
 
-    private static final String TABLE_NAME = "regis";
+    private static final String TABLE_NAME = "book";
     private static final String COL1 = "ID";
     private static final String COL2 = "CID";
-    private static final String COL3 = "name";
-    private static final String COL4 = "email";
-    private static final String COL5 = "phone";
-    private static final String COL6 = "pass";
+    private static final String COL3 = "bname";
+    private static final String COL4 = "suject";
+    private static final String COL5 = "author";
+    private static final String COL6 = "category";
 
-    public DatabaseHelper(Context context) {
+    public DatabaseHelperL(Context context) {
         super(context, TABLE_NAME, null, 1);
     }
- /*   @Override
+    /*   @Override
+       public void onCreate(SQLiteDatabase db) {
+           String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                   COL2 +" TEXT, " +
+                   COL3 +" TEXT, " +
+                   COL4 +" TEXT," +
+                   COL5 +" TEXT)";
+           db.execSQL(createTable);
+       }*/
+    @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL2 +" TEXT, " +
                 COL3 +" TEXT, " +
                 COL4 +" TEXT," +
-                COL5 +" TEXT)";
+                COL5 +" TEXT,"+
+                COL6 +" TEXT)";
         db.execSQL(createTable);
-    }*/
- @Override
- public void onCreate(SQLiteDatabase db) {
-     String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-             COL2 +" TEXT, " +
-             COL3 +" TEXT, " +
-             COL4 +" TEXT," +
-             COL5 +" TEXT,"+
-             COL6 +" TEXT)";
-     db.execSQL(createTable);
- }
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
@@ -80,6 +80,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //Cursor data = db.rawQuery(query,null);
         Cursor data = db.rawQuery("Select * from ttt where ID=" + id + "", null);
+        return data;
+
+    }
+    public Cursor getCatData(String category){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //Cursor data = db.rawQuery(query,null);
+        Cursor data = db.rawQuery("Select * from book where category=" + category + "", null);
         return data;
 
     }

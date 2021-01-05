@@ -7,15 +7,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class ProjectRegister extends AppCompatActivity {
 
     DatabaseHelper mDatabaseHelper;
 EditText et1,et2,et3,et4;
+Random r = new Random();
+int rand;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_register);
-
+         rand = r.nextInt(10000);
         mDatabaseHelper=new DatabaseHelper(this);
 et1=findViewById(R.id.name);et2=findViewById(R.id.email);et3=findViewById(R.id.phone);et4=findViewById(R.id.pass);
     }
@@ -23,7 +27,7 @@ et1=findViewById(R.id.name);et2=findViewById(R.id.email);et3=findViewById(R.id.p
 
         try {
             if (src != null && dest  != null && ar  != null&& dept  != null) {
-                boolean insertData = mDatabaseHelper.addData("Hii",src,dest,ar,dept);
+                boolean insertData = mDatabaseHelper.addData(String.valueOf(rand),src,dest,ar,dept);
 
                 if (insertData) {
                     toastMessage("Data Successfully Inserted!");
@@ -44,5 +48,9 @@ et1=findViewById(R.id.name);et2=findViewById(R.id.email);et3=findViewById(R.id.p
     public void Save(View view) {
         AddData(et1.getText().toString(),et2.getText().toString(),et3.getText().toString(),et4.getText().toString());
         Intent intent =new Intent(ProjectRegister.this,Hello.class);startActivity(intent);finish();
+    }
+    public void Loginn(View view) {
+        Intent intent = new Intent(ProjectRegister.this,LoginActivity.class);
+        startActivity(intent);
     }
 }
